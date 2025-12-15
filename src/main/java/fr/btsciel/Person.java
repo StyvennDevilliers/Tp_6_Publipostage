@@ -7,6 +7,51 @@ public class Person {
     private String adresse;
     private String codePostal;
     private String ville;
+    private String adherent;
+    private String contrat;
+    private String entreprise;
+    private String date;
+    private String dateDuJour;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDateDuJour() {
+        return date;
+    }
+
+    public void setDateDuJour(String dateDuJour) {
+        this.dateDuJour = dateDuJour;
+    }
+
+    public String getEntreprise() {
+        return entreprise;
+    }
+
+    public void setEntreprise(String entreprise) {
+        this.entreprise = entreprise;
+    }
+
+    public String getContrat() {
+        return contrat;
+    }
+
+    public void setContrat(String contrat) {
+        this.contrat = contrat;
+    }
+
+    public String getAdherent() {
+        return adherent;
+    }
+
+    public void setAdherent(String adherent) {
+        this.adherent = adherent;
+    }
 
     public String getAdresse() {
         return adresse;
@@ -21,7 +66,7 @@ public class Person {
     }
 
     public void setVille(String ville) {
-        ville = ville;
+        this.ville = ville;
     }
 
     public Genre getGenre() {

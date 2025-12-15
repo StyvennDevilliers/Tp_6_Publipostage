@@ -7,7 +7,7 @@ public class Ihm {
         try{
             new GestionDesPersonnes();
         }catch(Exception e){
-            System.err.println("Erreur lors de la lecture du fichier");
+            System.err.println("Erreur lors de la lecture ou l'ecriture du fichier");
         }
     }
 
