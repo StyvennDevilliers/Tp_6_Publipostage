@@ -1,0 +1,22 @@
+[nom] [prenom]
+[adresse]
+[codePostal] [ville]
+
+
+
+                                                                                                                [entreprise]
+                                                                                                     Fait à [ville] le [dateDuJour]
+
+
+Objet : résiliation de mon contrat
+Madame, Monsieur,
+Je soussigné(e) [nom] [prenom]
+demande la résiliation de mon contrat dont vous retrouverez les informations ci-dessous :
+• N° adhérent : [adherent]
+• N° de contrat :[contrat]
+• Date d’effet de la résiliation souhaitée : [date]
+Je vous remercie pour la prise en compte de ma demande de résiliation dans les meilleurs délais.
+Je vous prie d’agréer, Madame, Monsieur, mes salutations distinguées.
+
+
+                                               [nom] [prenom]
