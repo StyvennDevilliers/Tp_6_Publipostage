@@ -10,6 +10,7 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -22,46 +23,42 @@ public class GestionDesPersonnes {
 
     private static ArrayList<Person> person = new ArrayList<>();
 
-    public void ecrirePerson() throws IOException {
-        JsonElement tree = new JsonParser().parse(new FileReader("contact.json"));
+    public void ecrireLettre() throws IOException {
+        JsonElement tree = new JsonParser().parse(new FileReader(path.toString()));
         Gson gson = new Gson();
-        StringBuilder modele = new StringBuilder();
-        BufferedReader br = new BufferedReader(new FileReader("lettreType.txt"));
+        String lettre = lireModele("lettreType.txt");
 
         for(JsonElement e : tree.getAsJsonArray()) {
             m = gson.fromJson(e, Map.class);
-            while(br.ready()) {
-                String line = br.readLine();
-                modele.append(line).append("\n");
-            }
-            br.close();
 
-            String lettre = modele.toString();
             for (Map.Entry<String, String> entry : m.entrySet()) {
                 lettre = lettre.replace("[" + entry.getKey() + "]", entry.getValue());
             }
-            lettre = lettre.replace("[dateDuJour]", java.time.LocalDate.now().toString());
+            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            lettre = lettre.replace("[dateDuJour]", java.time.LocalDate.now().format(fmt));
             BufferedWriter bw = new BufferedWriter(new FileWriter("lettre" + m.get("nom") + ".txt"));
             bw.write(lettre);
             bw.close();
         }
     }
 
-    private void lectureFichier() throws IOException {
-        if (Files.exists(path)) {
-            FileReader fr = new FileReader(path.toFile());
-            Type type = new TypeToken<ArrayList<Person>>(){}.getType();
-            Gson gson = new Gson();
-            person = gson.fromJson(fr,type);
-
-        }else{
+    private String lireModele(String cheminModele) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(cheminModele)));
+            String line;
+            while (br.ready()) {
+                line = br.readLine();
+                sb.append(line).append("\n");
+            }
+        }catch (Exception e){
             throw new FileNotFoundException("file not found");
         }
-
+        return sb.toString();
     }
 
+
     public GestionDesPersonnes() throws IOException {
-        lectureFichier();
-        ecrirePerson();
+        ecrireLettre();
     }
 }

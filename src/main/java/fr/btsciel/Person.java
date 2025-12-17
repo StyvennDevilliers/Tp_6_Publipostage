@@ -9,11 +9,9 @@ public class Person implements Serializable {
     private String adresse;
     private String codePostal;
     private String ville;
-    private String adherent;
     private String contrat;
     private String entreprise;
     private String date;
-    private String dateDuJour;
 
     public String getDate() {
         return date;
@@ -21,14 +19,6 @@ public class Person implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
-    }
-
-    public String getDateDuJour() {
-        return date;
-    }
-
-    public void setDateDuJour(String dateDuJour) {
-        this.dateDuJour = dateDuJour;
     }
 
     public String getEntreprise() {
@@ -45,14 +35,6 @@ public class Person implements Serializable {
 
     public void setContrat(String contrat) {
         this.contrat = contrat;
-    }
-
-    public String getAdherent() {
-        return adherent;
-    }
-
-    public void setAdherent(String adherent) {
-        this.adherent = adherent;
     }
 
     public String getAdresse() {
