@@ -1,4 +1,4 @@
-[{"adherent":"az123", "contrat":"12345", "genre":"M", "nom":"PETER", "prenom":"Christian","adresse": "2 rue pasteur", "codePostal":"07200", "ville":"Aubenas", "entreprise":"Cisco", "date":"lundi 15 décembre 2025"},
-  {"adherent":"az123", "contrat":"12345", "genre":"F", "nom":"TAVERNIER", "prenom":"Isabelle","adresse": "2 rue pasteur", "codePostal":"69000", "ville":"Lyon", "entreprise":"Google", "date":"lundi 15 décembre 2025"},
-  {"adherent":"az123", "contrat":"12345", "genre":"M", "nom":"SANTONI", "prenom":"Alain","adresse": "2 rue pasteur", "codePostal":"75000", "ville":"Paris", "entreprise":"Microsoft", "date":"lundi 15 décembre 2025"},
-  {"adherent":"az123", "contrat":"12345", "genre":"M", "nom":"DECLERCQ", "prenom":"Georges","adresse": "2 rue pasteur", "codePostal":"07000", "ville":"Privas", "entreprise":"Jetbrains", "date":"lundi 15 décembre 2025"}]
+[{'adherent':'az123', 'contrat':'12345', 'genre':M, 'nom':PETER, 'prenom':Christian,'adresse': "2 rue pasteur", 'codePostal':'07200', 'ville':Aubenas, 'entreprise':Cisco, 'date':'lundi 15 décembre 2025'},
+{'adherent':'az123', 'contrat':'12345', 'genre':F, 'nom':TAVERNIER, 'prenom':Isabelle,'adresse': "2 rue pasteur", 'codePostal':'69000', 'ville':Lyon, 'entreprise':Google, 'date':'lundi 15 décembre 2025'},
+{'adherent':'az123', 'contrat':'12345', 'genre':M, 'nom':SANTONI, 'prenom':Alain,'adresse': "2 rue pasteur", 'codePostal':'75000', 'ville':paris, 'entreprise':Microsoft, 'date':'lundi 15 décembre 2025'},
+{'adherent':'az123', 'contrat':'12345', 'genre':M, 'nom':DECLERCQ, 'prenom':Georges,'adresse': "2 rue pasteur", 'codePostal':'07000', 'ville':Privas, 'entreprise':Jetbrains, 'date':'lundi 15 décembre 2025'}]

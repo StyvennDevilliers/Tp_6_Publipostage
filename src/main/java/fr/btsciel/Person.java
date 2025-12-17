@@ -1,6 +1,8 @@
 package fr.btsciel;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private Genre genre;
     private String nom;
     private String prenom;
