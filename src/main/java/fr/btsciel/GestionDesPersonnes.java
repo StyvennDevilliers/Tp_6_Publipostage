@@ -26,9 +26,10 @@ public class GestionDesPersonnes {
     public void ecrireLettre() throws IOException {
         JsonElement tree = new JsonParser().parse(new FileReader(path.toString()));
         Gson gson = new Gson();
-        String lettre = lireModele("lettreType.txt");
 
         for(JsonElement e : tree.getAsJsonArray()) {
+            String lettre = lireModele("lettreType.txt");
+
             m = gson.fromJson(e, Map.class);
 
             for (Map.Entry<String, String> entry : m.entrySet()) {
@@ -36,7 +37,7 @@ public class GestionDesPersonnes {
             }
             DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             lettre = lettre.replace("[dateDuJour]", java.time.LocalDate.now().format(fmt));
-            BufferedWriter bw = new BufferedWriter(new FileWriter("lettre" + m.get("nom") + ".txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("lettre_" + m.get("nom") + ".txt"));
             bw.write(lettre);
             bw.close();
         }
